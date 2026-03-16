@@ -29,3 +29,7 @@ npm run dev
 
 - 建议文本不超过 4000 个字符，否则链接可能过长。
 - 仅支持现代浏览器，因为依赖 `Web Crypto API`。
+
+## License
+
+This project is licensed under the MIT License. See the [`LICENSE`](/Users/linzhibin/demos/pasteany/LICENSE) file for details.

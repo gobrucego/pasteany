@@ -67,7 +67,7 @@ export default function HomePage() {
         >
           <div className="grid" style={{ alignItems: "start" }}>
             <div>
-              <span className="badge">Zero storage • Vercel ready</span>
+              <span className="badge">Zero storage • Vercel And CloudFlare ready</span>
               <p className="eyebrow" style={{ marginTop: "24px" }}>
                 Burn after reading
               </p>
