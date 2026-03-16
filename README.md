@@ -1,6 +1,6 @@
 # 焚信
 
-一个使用 Next.js 开发的阅后即焚文本工具，只支持文本字符，不使用数据库，适合快速部署到 Vercel。
+一个使用 Next.js 开发的阅后即焚文本工具，只支持文本字符，不使用数据库，适合快速部署到 Vercel 或者 Cloudflare Pages。
 
 ## 方案说明
 
@@ -24,6 +24,34 @@ npm run dev
 2. 在 Vercel 中导入该仓库。
 3. Framework Preset 选择 Next.js。
 4. 无需额外环境变量，直接部署即可。
+
+## 部署到 Cloudflare Pages
+
+这个项目已经配置为静态导出模式，适合部署到 Cloudflare Pages。
+
+1. 将项目推送到 GitHub 或 GitLab 仓库。
+2. 打开 Cloudflare Dashboard，进入 `Workers & Pages`。
+3. 点击 `Create application`，选择 `Pages`。
+4. 选择 `Import an existing Git repository`，连接你的仓库。
+5. 在构建配置中填写：
+   - Framework preset: `Next.js (Static HTML Export)`
+   - Production branch: `main`
+   - Build command: `npx next build`
+   - Build output directory: `out`
+6. 环境变量保持为空，直接开始部署。
+7. 部署完成后，Cloudflare 会分配一个 `*.pages.dev` 地址。
+
+如果要绑定自定义域名：
+
+1. 进入对应的 Pages 项目。
+2. 打开 `Custom domains`。
+3. 点击 `Set up a domain`。
+4. 输入你的域名并按提示完成验证。
+
+Cloudflare 官方说明：
+- [Next.js on Cloudflare Pages](https://developers.cloudflare.com/pages/framework-guides/nextjs/)
+- [Static Next.js site on Pages](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/)
+- [Custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/)
 
 ## 使用限制
 
